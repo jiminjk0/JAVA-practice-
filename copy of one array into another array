@@ -1,0 +1,23 @@
+import java.util.*;
+public class main {
+    public static void main(String args[]) {
+    Scanner sc = new Scanner(System.in);
+    
+    int[] numbers = new int[5];
+     int[] newnum = new int[5];
+    
+    // input
+    for(int i=0;i<5;i++){
+        numbers[i] = sc.nextInt();
+    }
+    for(int i=0;i<5;i++){
+        System.out.print(numbers[i] + " ");
+        
+    }
+    for(int i=0;i<5;i++){
+        newnum[i]=numbers[i];
+    System.out.print(newnum[i]);
+    }
+    }
+
+}

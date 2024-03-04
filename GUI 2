@@ -1,0 +1,16 @@
+import javax.swing.JOptionPane;
+/* Graphical Users Interface */
+public class main{
+    public static void main(String []args){
+     
+        /* To store the dialouge message as a string variable */
+        String name = JOptionPane.showInputDialog("Enter your name");
+        JOptionPane.showMessageDialog(null, "Hello " + name);
+
+
+        /* it stores only string value so we have to change into integer value */
+        int age = Integer.parseInt(JOptionPane.showInputDialog("Enter your age")); 
+        JOptionPane.showMessageDialog(null, "you are "+ age  + " years old") ;
+    }
+
+}

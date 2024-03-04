@@ -1,0 +1,31 @@
+/* MATH CLASS */
+public class main{
+    public static void main(String []args){
+     
+        /*MAX, MIN,ABS,sqrt,floor,ceil,round METHOD */
+         double x=3.14;
+         double y = -10.3;
+
+         double z = Math.max(x,y);
+         double s = Math.min(x,y);
+        double m = Math.abs(y);
+        double n = Math.sqrt(x);
+        double i = Math.round(x);
+        double j = Math.ceil(x);   /*rounded up */
+        double k = Math.floor(x);   /*rounded down */
+        
+
+
+       
+         System.out.println(z);
+         System.out.println(s);
+         System.out.println(m);
+         System.out.println(n);
+         System.out.println(i);
+         System.out.println(j);
+         System.out.println(k);
+
+
+    }
+
+}

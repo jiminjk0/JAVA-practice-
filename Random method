@@ -1,0 +1,13 @@
+import java.util.Random;
+//import random package 
+public class main {
+
+	public static void main(String[] args) {
+		
+			Random random = new Random();
+            int x = random.nextInt(6)+1;
+ // if we put limit it will count from 0 to 5 so get 6 add 1 
+// we can use boolean and double as well
+            System.out.println(x);
+	}
+}

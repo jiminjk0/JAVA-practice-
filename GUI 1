@@ -1,0 +1,13 @@
+/*show a message in dialog box */
+
+import javax.swing.JOptionPane;
+/* Graphical Users Interface */
+public class main{
+    public static void main(String []args){
+     
+        /* To store the dialog message as a string variable */
+        String name = JOptionPane.showInputDialog("Enter your name");
+        JOptionPane.showMessageDialog(null, "Hello " + name);
+    }
+
+}

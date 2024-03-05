@@ -1,0 +1,32 @@
+//take an array as input from user. search for a givem number x and print the undex at which it occurs
+
+
+import java.util.Scanner;
+
+
+public class main {
+   public static void main(String args[]) {
+       Scanner sc = new Scanner(System.in);
+       System.out.println("Enter size : ");
+       int size = sc.nextInt();
+       System.out.println("Enter numbers : ");
+       int numbers[] = new int[size];
+      
+      
+
+      //input 
+       for(int i=0; i<size; i++) {
+           numbers[i] = sc.nextInt();
+       }
+
+       System.out.println("Enter the number you want to find : ");
+       int x = sc.nextInt();
+
+       //print the numbers in array
+       for(int i=0; i<size; i++){
+        if(numbers[i]== x){
+            System.out.println("x found at index : " + i);
+        }
+       }
+   }
+}

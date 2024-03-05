@@ -6,7 +6,8 @@ import java.util.*;
 
 class calculator
 {
-    public int add(int num1, int num2){
+    public int add(int num1, int num2) // creating add method and accepting int values
+{
         int r = num1 + num2;
         return r;
     }
@@ -15,13 +16,14 @@ class calculator
 /** CREATE AN OBJECT WITH THE HELP OF NEW KEYWORD AND A REFERENCE VARIABLE 
 OF CALCULATOR (CLASS), PASSIN THE VALUES THAT NEEDS TO BE ADDED AND STORE
  THATS IN RESULT VARIABLE . PRINT THE RESULT */
+
 public class main {
    public static void main(String args[]) 
    {
         int n1 = 4;
         int n2 = 5;
         calculator cal = new calculator();
-        int result = cal.add(n1,n2);
+        int result = cal.add(n1,n2); // pass values  in add method
         System.out.println(result) ;
    }
 }

@@ -1,0 +1,34 @@
+import java.util.*;
+/** FIRST CREATE A CLASS NAMED CALCULATOR  WHICH RETURNS
+ INT VALUES THEN PASS IN ARGUMENTS AND DO OPERATIONS AND  STORE IT IN  R 
+ VARIABLE AND RETURN THE VARIABLE.
+ */
+
+class calculator
+{
+    public int add(int num1, int num2){
+        int r = num1 + num2;
+        return r;
+    }
+
+}
+/** CREATE AN OBJECT WITH THE HELP OF NEW KEYWORD AND A REFERENCE VARIABLE 
+OF CALCULATOR (CLASS), PASSIN THE VALUES THAT NEEDS TO BE ADDED AND STORE
+ THATS IN RESULT VARIABLE . PRINT THE RESULT */
+public class main {
+   public static void main(String args[]) 
+   {
+        int n1 = 4;
+        int n2 = 5;
+        calculator cal = new calculator();
+        int result = cal.add(n1,n2);
+        System.out.println(result) ;
+   }
+}
+
+
+
+
+/** you have to create a class as a blueprint which directs you to the object
+of the class that you created. byte code goes to JVM and then 
+it helps to use the object **/

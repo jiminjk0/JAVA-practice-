@@ -1,0 +1,34 @@
+
+import java.util.Scanner;
+
+
+public class main {
+   public static void main(String args[]) {
+       Scanner sc = new Scanner(System.in);
+       System.out.println("Enter size : ");
+       int size = sc.nextInt();
+       System.out.println("Enter numbers : ");
+       int numbers[] = new int[size];
+      
+      
+
+      //input 
+       for(int i=0; i<size; i++) {
+           numbers[i] = sc.nextInt();
+       }
+       boolean isAscending = false;
+     for(int i = 0; i<size-1; i++){
+        if(numbers[i] < numbers[i+1]){
+            isAscending = true;
+        }
+     }
+
+        if(isAscending){
+            System.out.println("the array is a sorted array in asc order");
+        }
+        else{
+            System.out.println("the array is not a sorted array in asc order");
+        }
+     
+   }
+}

@@ -1,0 +1,38 @@
+import java.util.*;
+/** FIRST CREATE A CLASS NAMED CALCULATOR  WHICH RETURNS
+ INT VALUES THEN PASS IN ARGUMENTS AND DO OPERATIONS AND  STORE IT IN  R 
+ VARIABLE AND RETURN THE VARIABLE.
+ */
+
+class calculator
+{
+    public int add(int num1, int num2) // creating add method and accepting int values
+    {
+        int r = num1 + num2;
+        return r;
+    }
+    public int add(int num1, int num2, int num3) // creating another method using same method name add but having different parameters, method overloading
+    {
+        int r1 = num1 + num2 + num3;
+        return r1;
+    }
+
+}
+/** CREATE AN OBJECT WITH THE HELP OF NEW KEYWORD AND A REFERENCE VARIABLE 
+OF CALCULATOR (CLASS), PASSIN THE VALUES THAT NEEDS TO BE ADDED AND STORE
+ THATS IN RESULT VARIABLE . PRINT THE RESULT */
+public class main {
+   public static void main(String args[]) 
+   {
+    
+
+      /**  System.out.println("enter a number");
+        int n1 = sc.nextInt(); // storing value from user
+        System.out.println("enter another number");
+        int n2 = sc.nextInt(); // storing value from user */ 
+
+        calculator cal = new calculator();
+        int result = cal.add(5,6,9); // pass values  in add method
+        System.out.println("addition is " + result) ;
+   }
+}

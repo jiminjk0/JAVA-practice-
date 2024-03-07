@@ -1,0 +1,17 @@
+ public class main{
+   public static void main(String args[])
+{
+   int nums[] = new int[4];
+   nums[0] = 4;
+   nums[1] = 1;
+   nums[2] = 6;
+   nums[3] = 8;
+
+   for(int n : nums ) // storing each value of nums in int type of n variable
+   {
+      System.out.println(n);
+   }
+
+}  
+
+   }

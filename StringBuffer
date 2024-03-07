@@ -1,0 +1,17 @@
+// Stringbuffer = mmutable 
+
+
+public class main{
+   public static void main(String args[])
+{
+      StringBuffer sb = new StringBuffer("rajanya");
+      System.out.println(sb.capacity()); // capacity 16 + the string i added = 23
+   System.out.println(sb.length()); // length != capacity
+     String str = sb.toString(); 
+     System.out.println(str);// can't store sb in string cause it wouldn't match so typecast
+     sb.append("mukherjee"); 
+     System.out.println(sb);//rajanyamukherjee
+     sb.deleteCharAt(1);
+     System.out.println(sb);//rjanyamukherjee
+   }
+}

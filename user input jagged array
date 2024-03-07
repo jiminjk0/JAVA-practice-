@@ -1,0 +1,41 @@
+// jagged array example from user input
+import java.util.*;
+public class main {
+   public static void main(String args[])
+   {
+    Scanner sc = new Scanner(System.in);
+    // declare no of rows for array
+      int m; 
+      System.out.println("Enter the number of rows");
+      m=sc.nextInt();
+
+      //declare array with m rows
+      int arr[][] = new int[m][];
+
+      //colms for each row
+      System.out.println("Enter the number of columns for each rows");
+      for(int i = 0; i<m; i++){
+         arr[i] = new int[sc.nextInt()];
+      }
+
+      //input elements
+      System.out.println("Enter the elements");
+      for(int i=0; i<arr.length; i++){
+         for(int j=0; j<arr[i].length; j++){
+           arr[i][j] = sc.nextInt();
+         }
+         System.out.println();
+      }
+      
+      //output
+      for(int i=0; i<arr.length; i++){
+         for(int j=0; j<arr[i].length; j++){
+            System.out.print(arr[i][j] + " ");
+         }
+         System.out.println();
+      }
+
+     
+       
+   }
+}

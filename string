@@ -1,0 +1,13 @@
+// String = immutable 
+
+ public class main{
+   public static void main(String args[])
+{
+      
+    String name = "rajanya";
+    System.out.println(name.charAt(2));
+    System.out.println(name.length());
+    System.out.println(name.substring(2,  5));
+}  
+
+   }

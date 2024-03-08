@@ -1,0 +1,63 @@
+// Encapsulation
+/** It is the mechanism of bundling data and methods into a single unit, called a class. 
+Encapsulation helps to protect the data from being accessed directly and manipulated, leading to mistakes.
+In Java, encapsulation can be achieved by declaring class variables as private and providing public 
+getter and setter methods to access and update the value of a private variable.*/
+
+class Human
+{
+       private int age;  // this variable is now only accessable in the same class
+       private String name;
+
+        // only way to access this is by methods. set and get
+
+       public void setAge(int j){
+          age=j;
+       }
+
+       public void setName(String temp){
+        name=temp;
+     }
+     
+     // returns value 
+       public int getAge(){
+
+        return age;
+       }             
+
+       public String getName(){
+        
+        return name;
+       }
+}
+
+
+class main {
+    public static void main(String[] args)
+    {
+        Human obj = new Human(); // creating object
+
+        //setting age and name of obj
+        obj.setAge(20);
+        obj.setName("rajanya");
+
+
+        // print
+        System.out.println(obj.getAge() + " " + obj.getName());
+
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+

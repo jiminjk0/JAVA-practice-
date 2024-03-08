@@ -1,0 +1,16 @@
+/** access modifiers
+
+Access modifiers control the visibility and accessibility of class members and methods. Here are some access modifiers:
+Default access modifier
+Also known as the package accessibility modifier, this modifier is used to set accessibility within the package. It means that its method or class cannot be accessed from outside the package.
+Private
+This modifier makes variables or methods declared with it only accessible to methods of the class in which they're declared.
+Protected
+This modifier makes members of a class more visible than private but less than public accessibility. Protected members of a base class can only be shared by their descendants, who can override or use them.
+Public
+This modifier has no restrictions and makes data members, methods, and classes that declared public accessible from anywhere.
+
+  public : it can be accessed from anywhere
+  private : only can be used in same class
+  default :  can be accessed in same package, same class, same package subclass and non subclass
+  protected : can't use it in different package but can be used outside the package but have to be in sub class

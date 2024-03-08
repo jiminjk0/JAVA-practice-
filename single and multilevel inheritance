@@ -1,0 +1,52 @@
+//Single and Multilevel Inheritance
+
+
+class Calc
+{
+    public int add(int n1, int n2)
+    {
+        return n1+n2;
+    }
+
+    public int sub(int n1, int n2)
+    {
+        return n1-n2;
+    }
+}
+// single level
+class AdvCalc extends Calc
+{
+    public int mul(int n1,int n2)
+    {
+       
+        return n1*n2;
+    }
+
+    public int div(int n1,int n2)
+    {
+       
+        return n1/n2;
+    }
+}
+// multilevel 
+class VeryAdvCalc extends AdvCalc{
+    public int power(int n1, int n2){
+        return (int)Math.pow(n1, n2);
+    }
+}
+
+public  class main
+{
+    public static void main(String args[])
+    {
+    //  Calc obj = new Calc();
+     VeryAdvCalc obj = new VeryAdvCalc();
+     int r1 = obj.add(4,5);
+     int r2 = obj.sub(5,4);
+     int r3 = obj.mul(4,5);
+     int r4 = obj.div(4,2);
+     int r5 = obj.power(3, 2);
+
+     System.out.println("add : " + r1 + " " + "sub : " + r2 +" " + "mul : " + r3 + " " + "div :  " + r4 + " " + "power : " + r5);
+    }
+}

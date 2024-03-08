@@ -1,0 +1,45 @@
+//Inheritance 
+//to reduce redundancy we can use inheritance and create a new class which will inherit features from it's parent class
+
+class Calc
+{
+    public int add(int n1, int n2)
+    {
+        return n1+n2;
+    }
+
+    public int sub(int n1, int n2)
+    {
+        return n1-n2;
+    }
+}
+
+class AdvCalc extends Calc
+{
+    public int mul(int n1,int n2)
+    {
+       
+        return n1*n2;
+    }
+
+    public int div(int n1,int n2)
+    {
+       
+        return n1/n2;
+    }
+}
+
+public  class main
+{
+    public static void main(String args[])
+    {
+    //  Calc obj = new Calc();
+     AdvCalc obj = new AdvCalc();
+     int r1 = obj.add(4,5);
+     int r2 = obj.sub(5,4);
+     int r3 = obj.mul(4,5);
+     int r4 = obj.div(4,2);
+
+     System.out.println("add : " + r1 + " " + "sub : " + r2 +" " + "mul : " + r3 + " " + "div :  " + r4);
+    }
+}

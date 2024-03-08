@@ -1,0 +1,27 @@
+// anonymous object in Java
+//In Java, an anonymous object is an object that is created without giving it a name.
+
+class A // creating  A class
+{
+
+    public A()
+    {
+        System.out.println("object created"); // creating constructor
+    }
+    public void show()
+    {
+        System.out.println("in a show");   //a method that prints something
+    }
+}
+
+
+
+public  class main
+{
+    public static void main(String args[])
+    {
+     // creating anonymous object of A
+        new A().show(); //calling its show method
+    }
+}
+

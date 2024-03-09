@@ -1,0 +1,37 @@
+
+// inner class 
+
+
+
+class A //couter class
+{
+  int age;
+  public void show()
+  {
+   System.out.println("in show");
+  }
+
+  class B //inner class
+  {
+    public void config()
+    {
+      System.out.println("in config");
+    }
+   
+  }
+}
+ public class main
+{
+    public static void main(String args[])
+    {
+    A obj = new A(); //creating object of A
+    obj.show();
+
+    A.B obj1 = obj.new B(); // creating object of B which belongs to outer class A and need the object of A class
+    obj1.config();
+    }
+   
+}
+
+// if the class B is static we don't create object anymore 
+// then, A.B obj1 = new A.B();

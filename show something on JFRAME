@@ -1,0 +1,38 @@
+import java.awt.*;    
+import javax.swing.*; 
+
+public class FirstGUI
+{
+  
+    public static void main(String[] args)
+    {
+        ABC obj = new ABC(); 
+       
+
+       
+    }
+}
+class ABC extends JFrame  // need a frame  and the frame follows card layout
+{
+        public ABC() // constructor
+
+        { 
+            
+            // create an object of the new layout
+            setLayout(new FlowLayout()); // to change from card layout
+
+            // jframe is by default invisible we have to make it visible
+
+            JLabel l = new JLabel("hello world"); // creating JLabel to type something
+            JLabel l1 = new JLabel("hello rajanya");
+            
+            add(l);
+            add(l1);
+            setVisible(true);
+            setSize(500,500);
+        }
+
+
+}
+
+

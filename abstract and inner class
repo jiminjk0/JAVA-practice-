@@ -1,0 +1,30 @@
+
+// anon inner class 
+// first create class then object
+
+
+
+abstract class A 
+{
+  public abstract void show()
+  {
+    
+  }
+}
+ public class main
+{
+    public static void main(String args[])
+    {
+    A obj = new A()  // do not need to create separate class for abstract class use anon inner class
+    {
+      public void show()
+  {
+    System.out.println("in new show");
+  }
+}; //creating object of A
+    obj.show();
+
+    
+    }
+   
+}

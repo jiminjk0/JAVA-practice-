@@ -1,0 +1,56 @@
+
+// class to class : extends
+// class to interface : implements
+// interface to interface : extends
+
+
+interface A  // in interface all methods are public abstract. it just shows you the design
+{
+  int age = 44; // final and static variable by default
+  String name = "rajanya";
+   void show();
+   void config();
+
+}
+
+interface X{
+  void run();
+}
+
+class B implements A, X  // we can create and add more interface in one class but have to add all the methods in the class
+{
+  public void show()
+  {
+    System.out.println("in show");
+  }
+  public void config()
+  {
+    System.out.println("in config");
+  }
+  public void run()
+  {
+    System.out.println("running");
+  }
+}
+
+
+ public class main
+{
+    public static void main(String args[])
+    {
+      A obj;
+      
+       obj = new B();
+      obj.show();
+      obj.config();
+
+      X obj1;
+      obj1 = new B ();
+      obj1.run();
+
+      System.out.println(A.name); // can directly use without creating object as it is static 
+
+    
+    }
+   
+}

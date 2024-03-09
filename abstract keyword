@@ -1,0 +1,35 @@
+/**The abstract keyword is a non-access modifier, used for classes and methods. 
+ * Class: An abstract class is a restricted class that cannot be used to create objects 
+ * (to access it, it must be inherited from another class). 
+ * Method: An abstract method can only be used in an abstract class, 
+ * and it does not have a body. abstract class can have any methods but 
+ * an abstract method will always have an abstract class */
+
+// an abstract method  can only be defined by an absract class
+abstract class Car{
+  public abstract void drive(); //instead of creating a method declare it because you don't know how to drive
+  
+  public void playMusic()
+  {
+    System.out.println("play music");
+  }
+
+}
+class WagonR extends Car
+{
+  public void drive()
+  {
+    System.out.println("driving");
+  }
+}
+ public class main
+{
+    public static void main(String args[])
+    {
+       Car obj = new WagonR(); // can't create object of abstract class
+       obj.drive();
+       obj.playMusic();
+    }
+   
+}
+

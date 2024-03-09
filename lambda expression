@@ -1,0 +1,27 @@
+// Lambda expression only works with functional interface
+
+@FunctionalInterface // one method only
+interface A // only the abstract idea or design
+{
+  int add(int n1, int n2);
+  
+ 
+}
+
+
+ public class main
+{
+    public static void main(String args[])
+    {
+      // lambda expression 
+      A obj = (n1, n2) ->  
+      {
+        return(n1+n2);
+      };
+
+      int result = obj.add(4,5);
+      System.out.println(result);
+    }
+   
+}
+

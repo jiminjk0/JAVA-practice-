@@ -1,0 +1,33 @@
+// enum : it also supports if and else and switch
+
+/** Enum, introduced in Java 5, is a special data type that consists of
+ *  a set of pre-defined named values separated by commas. 
+ * These named values are also known as elements or enumerators or enum instances.
+ *  Since the values in the enum type are constant,
+ *  you should always represent them in UPPERCASE letters. */
+
+// enum is a class but can't extends we can use methods, constructors here
+enum Status {
+
+  RUNNING, FAILED, PENDING, SUCSESS; // objects
+}
+
+ public class main
+{
+    public static void main(String args[])
+    {
+      int i = 5;
+      Status s = Status.RUNNING;
+      Status[] s1 = Status.values(); // all of the objects adding []cause it's an array
+      // using for loop to print all 
+      s.
+      for(Status j : s1){
+        System.out.println(j);
+        System.out.println(j.ordinal()); // prints all the order 
+      }
+     
+    
+    }
+   
+}
+

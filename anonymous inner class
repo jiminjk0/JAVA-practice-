@@ -1,0 +1,31 @@
+
+// anon inner class 
+// first create class then object
+
+
+
+class A 
+{
+  public void show()
+  {
+    System.out.println("in A show");
+  }
+}
+ public class main
+{
+    public static void main(String args[])
+    {
+    A obj = new A()  
+    // creating an inner class which doesn't have a name : anonymous inner class
+    {
+      public void show()
+  {
+    System.out.println("in new show");
+  }
+}; //creating object of A
+    obj.show();
+
+    
+    }
+   
+}

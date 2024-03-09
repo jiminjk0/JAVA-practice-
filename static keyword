@@ -17,3 +17,14 @@ class access{
             System.out.println(obj1.x + " " + obj2.x);
             }
    }
+
+/** static: : A static member belongs to the class rather than to an object.
+The static keyword in Java is used to create class-level variables and methods. 
+Static members are shared across all instances of a class, 
+and they can be accessed without creating an object of the class.
+Static variables are shared across all instances of a class. 
+This means that if you change the value of a static variable in one instance of the class,
+ the change will be reflected in all other instances of the class.
+Static methods can be called without creating an object of the class. 
+This makes them useful for utility methods that are not specific to any particular
+instance of the class. */

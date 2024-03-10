@@ -1,0 +1,28 @@
+import java.util.ArrayList;
+import java.util.Collection;
+
+public class main
+ {
+    public static void main(String args[])
+    {
+        // use angular brackets to specify the type of data in collection
+        Collection<Integer>nums = new ArrayList<Integer>(); // we can use list and get method to get values by index
+        
+        nums.add(5);
+        nums.add(8);
+        nums.add(9);
+        nums.add(3);
+     // no need of a for loop to print this arraylist
+     // we don't have indexing in arrayList so use enhanced for loop, the values
+     //here is object type so we have to mention the type in array we can only add one type like integer
+
+
+     System.out.println(nums);
+        
+     for(int n : nums){
+        System.out.println(n);
+     }
+
+        
+    }
+ }

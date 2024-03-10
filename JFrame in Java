@@ -1,0 +1,28 @@
+import java.awt.Color;
+
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+
+public class main{
+    public static void main(String[] args){
+        // JFRAME = a gUI window to add components to
+        JFrame frame = new JFrame(); // creating instance of the frame and giving it a name : creating Frame
+
+        frame.setVisible(true); // makes it visible
+
+        frame.setSize(300, 300); // sets dimensions
+        frame.setResizable(false);// we can't resize the frame once it is used
+        
+        frame.setTitle("rajanya"); // sets title
+
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // now when we close the frame it will exit outta operation by default it's Hide_On_Close
+        
+        ImageIcon image = new ImageIcon("mylogo.jpg"); //create an image icon
+        
+        frame.setIconImage(image.getImage()); // this add the icon in JFRAME and changes the icon
+        
+        frame.getContentPane().setBackground(Color.PINK); // changes color of background
+        frame.getContentPane().setBackground(new Color(129, 133, 137));  //  this how we can use rgb values
+
+    }
+}

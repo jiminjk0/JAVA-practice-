@@ -1,0 +1,71 @@
+/** A race condition in Java emerges when two or more threads concurrently access
+ *  shared data, and the final outcome hinges on the timing or order of their
+ * execution. This can result in unpredictable behavior and elusive bugs,
+ * posing challenges during reproduction and debugging.
+
+ * There are a number of ways to prevent race conditions in Java.
+ * One common approach is to use synchronization.
+ * Synchronization allows you to control which thread has access to
+ * a shared resource at a given time. This can be done using the
+ * synchronized keyword. Another way to prevent race conditions is to use
+ * immutable objects. Immutable objects cannot be changed once they are created.
+ *  This means that there is no risk of two threads modifying the same object at the same time.
+Finally, you can also use thread-safe collections.
+Thread-safe collections are designed to be used by multiple threads without the risk of race conditions.*/
+
+
+class Counter{
+
+    int count;
+    public synchronized void increment()
+    {   
+        count++;
+    }
+}
+
+
+ public class main
+ {
+    public static void main(String args[]) throws InterruptedException 
+    {
+        Counter c = new Counter();
+         
+        Runnable obj1 = () -> 
+              {
+           
+               for(int i=1; i<=1000; i++)
+               {
+                 c.increment();
+               
+             }
+            
+           };
+        
+        // runnable type and object of the class
+        Runnable obj2 = () -> {
+           
+           for(int i=1; i<=1000; i++)
+           {
+               c.increment();
+              
+         }
+         
+       };
+       
+        Thread t1 = new Thread(obj1); 
+        Thread t2 = new Thread(obj2);
+      
+        t1.start();
+        t2.start();
+        // to wait and join  both work and then we will print the count
+        t1.join();
+        t2.join();
+       
+
+        System.out.println(c.count);
+        
+    }
+       
+
+        
+    }

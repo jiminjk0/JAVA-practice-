@@ -1,0 +1,31 @@
+//map : instead of having inex values we have a name or key to it. map is an interface and key can't be repeated
+// hashtable is synchronized version of hashmap
+import java.util.HashMap;
+import java.util.Map;
+import java.util.TreeMap;
+
+
+public class main
+ {
+    public static void main(String args[])
+    {   // type of key and type of value to mention and HashMap is class
+        Map<String, Integer> students = new HashMap<>(); // treemap to sort by keys
+ 
+        // put method
+        students.put("rajanya", 1);
+        students.put("raja", 2);
+        students.put("shreya", 3);
+        students.put("ayan", 4);
+        students.put("navin", 5);
+
+        System.out.println(students.keySet());
+        for(String key : students.keySet())
+        {
+            System.out.println(key + " : " + students.get(key)); // all the values and keys 
+        }
+
+       
+     }
+
+        
+}

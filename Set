@@ -1,0 +1,37 @@
+// set :
+// collection supports duplicate values while sets support only unique values and doesn't have indexing
+import java.util.ArrayList; 
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.TreeSet;
+
+public class main
+ {
+    public static void main(String args[])
+    {
+        // use angular brackets to specify the type of data in collection and class name is Hashset
+        Set<Integer>nums = new HashSet<Integer>(); 
+       // Set<Integer>nums = new TreeSet<Integer>();  // Treeset for sorted values
+        nums.add(65);
+        nums.add(8);
+        nums.add(9);
+        nums.add(3);
+        nums.add(5);
+     // no need of a for loop to print this 
+     //here is object type so we have to mention the type in array we can only add one type like integer
+
+
+     System.out.println(nums);
+        
+     for(int n : nums){
+        System.out.println(n);
+     }
+
+        
+    }
+ }
+
+
+
+

@@ -1,0 +1,55 @@
+// runnable with lambda  as runnable is interface
+
+
+
+ class A implements Runnable{
+
+  
+}
+
+ class B implements Runnable{
+   }
+
+
+ public class main
+ {
+    public static void main(String args[])
+    {
+         Runnable obj1 = () -> {
+            
+                for(int i=0; i<=5; i++){
+                    System.out.println("Hi"); 
+                    try{
+                        Thread.sleep(10);
+                    }
+                catch(InterruptedException e){
+                    e.printStackTrace();
+                }
+                
+              }
+             };
+         
+         // runnable type and object of the class
+         Runnable obj2 = () -> {
+            
+            for(int i=0; i<=5; i++){
+                System.out.println("Hello"); 
+                try{
+                    Thread.sleep(10);
+                }
+            catch(InterruptedException e){
+                e.printStackTrace();
+            }
+            
+          } 
+         };
+        
+         Thread t1 = new Thread(obj1); // as start does not belong to runnable we have to create objects of threads
+         Thread t2 = new Thread(obj2);
+        // these threads have no idea of obj1 or obj2
+         t1.start(); 
+         t2.start();
+
+        
+    }
+ }

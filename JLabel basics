@@ -1,0 +1,61 @@
+import java.awt.CardLayout;
+import java.awt.Color;
+import java.awt.FlowLayout;
+import java.awt.Font;
+import java.awt.GridLayout;
+
+import javax.swing.BorderFactory;
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.border.Border;
+
+public class main{
+    public static void main(String[] args){
+        
+        JFrame frame = new JFrame(); // creating instance of the frame and giving it a name : creating Frame
+
+        frame.setVisible(true); // makes it visible
+        frame.setSize(500, 500); // sets dimensions
+        frame.setResizable(true);// we can't resize the frame once it is used
+        frame.setTitle("rajanya"); // sets title
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // now when we close the frame it will exit outta operation by default it's Hide_On_Close
+        ImageIcon image = new ImageIcon("mylogo.jpg"); //create an image icon
+        frame.setIconImage(image.getImage()); // this add the icon in JFRAME and changes the icon
+        frame.getContentPane().setBackground(Color.PINK); // changes color of background
+        frame.getContentPane().setBackground(new Color(230, 133, 137));  //  this how we can use rgb values
+        frame.setLayout(null); // changes the layout
+        
+
+        // JLable : to add text or images or both to the frame
+        JLabel label = new JLabel(); // creating a label
+
+        label.setText("hi, welcome to my app!"); // set texts
+        frame.add(label); // add label to its frame
+        ImageIcon  labelIcon = new ImageIcon("emoji.jpg"); // creates icon
+        label.setIcon(labelIcon); // sets icon to the label
+        label.setHorizontalTextPosition(JLabel.CENTER); //sets the text relative to its image. JLabel.left or center or right
+        label.setVerticalTextPosition(JLabel.TOP); // sets text top, center or bottom
+        label.setForeground(Color.white); // sets color of text
+        label.setFont(new Font("MV Boli", Font.PLAIN,20));// sets font style of text
+        label.setIconTextGap(-1); // set gap of text to image
+        label.setBackground(Color.black); // sets background color
+        label.setOpaque(true); //display the bg color
+
+        //BORDER
+        Border border = BorderFactory.createLineBorder(Color.GREEN, 10); //creates border
+        label.setBorder(border); //adds the border to the label 
+
+        label.setVerticalAlignment(JLabel.CENTER); // sets vertical positions of icon and text within the label. top, bottom and center
+        label.setHorizontalAlignment(JLabel.CENTER); // sets horizontal position within label. right, left and center
+        
+        
+        label.setBounds(100, 100,250,250 ); // corners x and y  for everything
+        //frame.pack(); 
+
+        
+
+
+
+    }
+}

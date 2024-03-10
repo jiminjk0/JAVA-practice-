@@ -1,0 +1,58 @@
+// threads priority and sleep
+
+// extending to threads
+ class A extends Thread{
+    //as there is start method there have to be run methods in class
+         
+  public void run(){
+    for(int i=0; i<=100; i++){
+        System.out.println("Hi"); // after printing one hi we can ask scheduler to wait
+       // it throws an exception
+        try{
+            Thread.sleep(10); 
+        }
+    catch(InterruptedException e){
+        e.printStackTrace();
+    }
+    
+  }  
+ }
+}
+
+ class B extends Thread{
+    public void run(){
+      for(int i=0; i<=100; i++){
+          System.out.println("Hello");
+          try{
+            Thread.sleep(10); 
+        }
+    catch(InterruptedException e){
+        e.printStackTrace();
+    }
+  
+      }
+    }  
+   }
+
+
+ public class main 
+ {
+    public static void main(String args[])
+    {
+         A obj1 = new A();
+         B obj2 = new B();
+        //when its threads call the start method and as there is start method there have to be run methods in class
+         System.out.println(obj1.getPriority()); // shows the priority
+         obj2.setPriority(9);
+
+         obj1.start(); 
+         // to have a gap in between hi and hello printing 
+         try {
+            Thread.sleep(9); // on;y 1 to 10 priority
+         } catch (InterruptedException e) {
+           
+           e.printStackTrace(); // TODO: handle exception
+         }
+         obj2.start();
+    }
+ }

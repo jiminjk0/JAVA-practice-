@@ -1,0 +1,29 @@
+import java.util.*;
+
+public class Swap
+{
+
+    public static void main(String[] args)
+    {
+       Scanner sc = new Scanner(System.in);
+       System.out.println("Enter a number");
+       int num = sc.nextInt();
+
+      /* int rev=0;
+       int rem=0;
+       while(num!=0){
+        rem=num%10; // 123%10 =3, 12%10 =2, 1%10=1
+        rev=rev*10 + rem; // rev =3, rev=32, rev = 321
+        num=num/10; //123/10 = 12,12/10 =1 
+       }
+      */
+
+      //using stringbuffer
+
+       // StringBuffer sb = new StringBuffer(String.valueOf(num));
+       // StringBuffer rev = sb.reverse(); 
+      
+
+       System.out.println("rev is " + rev);
+    }
+}

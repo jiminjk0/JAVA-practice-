@@ -1,0 +1,62 @@
+
+import java.awt.Color;
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import java.awt.BorderLayout;
+
+
+public class main{
+    public static void main(String[] args){
+        
+        JFrame frame = new JFrame(); // creating instance of the frame and giving it a name : creating Frame
+
+        frame.setVisible(true); // makes it visible
+        frame.setSize(400, 400); // sets dimensions
+        frame.setResizable(true);// we can't resize the frame once it is used
+        frame.setTitle("rajanya"); // sets title
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // now when we close the frame it will exit outta operation by default it's Hide_On_Close
+        ImageIcon image = new ImageIcon("mylogo.jpg"); //create an image icon
+        frame.setIconImage(image.getImage()); // this add the icon in JFRAME and changes the icon
+        frame.getContentPane().setBackground(Color.BLACK); // changes color of background
+        frame.getContentPane().setBackground(new Color(230, 133, 137));  //  this how we can use rgb values
+        frame.setLayout(null); // changes the layout
+        
+        JLabel label = new JLabel();
+        ImageIcon labelimage = new ImageIcon("thumbsup.jpg");
+        label.setText("hey!");
+        label.setIcon(labelimage);
+        label.setIcon(labelimage); // adds to the label
+        //frame.add(label); // add label to frame
+    
+
+        //JPanel : a GUI component that functions as a container to hold other components
+
+        JPanel redpanel = new JPanel(); //creating panel
+        redpanel.setBackground(Color.red); //color of panel
+        redpanel.setBounds(0,0,300,300); // as we using null layout
+       
+        JPanel bluepaPanel = new JPanel();
+        bluepaPanel.setBackground(Color.BLUE);
+        bluepaPanel.setBounds(300,0,300,300);
+
+        JPanel greenpanel = new JPanel();
+        greenpanel.setBackground(Color.GREEN);
+        greenpanel.setBounds(0,300,600,300);
+        
+        // adding panel to frame
+
+        frame.add(redpanel);
+        frame.add(bluepaPanel);
+        frame.add(greenpanel);
+
+        //layout
+        greenpanel.setLayout(new BorderLayout()); // default layout for JFrame
+        label.setVerticalAlignment(JLabel.TOP);
+        label.setHorizontalAlignment(JLabel.RIGHT);
+
+        // adding label to panel
+
+        greenpanel.add(label);
+

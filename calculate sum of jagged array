@@ -1,0 +1,21 @@
+public class JaggedArrayExample {
+    public static int calculateSum(int[][] jaggedArray) {
+        int sum = 0;
+        for (int[] row : jaggedArray) {
+            for (int element : row) {
+                sum += element;
+            }
+        }
+        return sum;
+    }
+
+    public static void main(String[] args) {
+        int[][] jaggedArray = {
+            {1, 2, 3},
+            {4, 5},
+            {6, 7, 8, 9}
+        };
+        int totalSum = calculateSum(jaggedArray);
+        System.out.println("Sum of all elements in the jagged array: " + totalSum);
+    }
+}

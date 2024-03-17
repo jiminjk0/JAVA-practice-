@@ -1,0 +1,66 @@
+import java.util.Scanner;
+
+public class main
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+
+        // number of rows
+        System.out.println("Enter the numbers of rows : ");
+        int numRows = sc.nextInt();
+        
+        int[][] jaggedArray = new int[numRows][];
+
+        //number of elements of the row
+
+        for(int i=0; i<numRows; i++)
+        {
+        
+            System.out.println("Enter the number of elements of this row " + (i+1)  + " : ");
+            int numElements = sc.nextInt();
+            jaggedArray[i] = new int[numElements];
+        
+        // input elements of the rows
+        
+        System.out.println("Enter the " + numElements + "  elements of row  "  + (i+1) + " " );
+        for(int j=0; j<numElements; j++)
+        {
+         
+            jaggedArray[i][j] = sc.nextInt();
+        }
+    }
+    //output
+    System.out.println( "\njagged array :");
+
+    for(int i=0; i<numRows; i++)
+    {
+        for(int j=0; j<jaggedArray[i].length; j++)
+        {
+            System.out.print(jaggedArray[i][j]  + " ");
+        }
+        System.out.println();
+        
+    }
+
+    int max=jaggedArray[0][0];
+
+    for(int i=0; i<numRows; i++)
+    {
+        for(int j=0; j<jaggedArray[i].length; j++)
+        {
+            if(jaggedArray[i][j] > max)
+            {
+               max = jaggedArray[i][j];
+            }
+        }
+
+        
+        
+    }
+    System.out.println("max is " + max);
+    
+       
+       
+    }
+}

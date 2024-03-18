@@ -1,0 +1,34 @@
+// empty 
+
+ArrayList<String> list = new ArrayList<>();
+if (list.isEmpty()) {
+    System.out.println("ArrayList is empty");
+}
+
+//index
+
+ArrayList<String> list = new ArrayList<>(Arrays.asList("apple", "banana", "orange"));
+int index = list.indexOf("banana");
+System.out.println("Index of 'banana': " + index);
+
+// remove all elements
+ArrayList<String> list = new ArrayList<>(Arrays.asList("apple", "banana", "orange"));
+list.clear();
+
+//sort arraylist
+
+ArrayList<Integer> list = new ArrayList<>(Arrays.asList(5, 2, 7, 1, 9));
+Collections.sort(list);
+
+// covert arraylist to array
+ArrayList<String> list = new ArrayList<>(Arrays.asList("apple", "banana", "orange"));
+String[] array = list.toArray(new String[0]);
+
+//list contains specific element
+
+ArrayList<String> list = new ArrayList<>(Arrays.asList("apple", "banana", "orange"));
+if (list.contains("banana")) {
+    System.out.println("ArrayList contains 'banana'");
+}
+
+

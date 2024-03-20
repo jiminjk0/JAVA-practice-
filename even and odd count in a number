@@ -1,0 +1,44 @@
+import java.util.Arrays;
+import java.util.*;
+
+public class main
+{
+   public static void main(String[] args)
+   {
+    
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Enter a number");
+    int n = sc.nextInt();
+    int even_count = 0;
+    int odd_count = 0;
+    int m=0;
+    
+
+    while(n!=0)
+    {
+        
+        m=n%10;
+        
+    
+    if(m%2==0)
+    {
+        even_count++;
+       
+    }
+    else
+    {
+        odd_count++;
+       
+    }
+    n = n/10;
+    
+ }
+
+ System.out.println("even count is " + even_count + " odd cound is " + odd_count);
+
+ 
+
+
+
+   }
+}

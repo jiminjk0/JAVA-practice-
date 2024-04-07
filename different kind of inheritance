@@ -1,0 +1,59 @@
+// Single inheritance
+class Animal {
+  void eat() {
+    System.out.println("eating...");
+  }
+}
+
+class Dog extends Animal {
+  void bark() {
+    System.out.println("barking...");
+  }
+}
+
+// Multilevel inheritance
+class BabyDog extends Dog {
+  void weep() {
+    System.out.println("weeping...");
+  }
+}
+
+// Hierarchical inheritance
+class Cat extends Animal {
+  void meow() {
+    System.out.println("meowing...");
+  }
+}
+
+// Hybrid inheritance
+class Lion extends Cat {
+  void roar() {
+    System.out.println("roaring...");
+  }
+}
+
+public class Main {
+  public static void main(String[] args) {
+    // Single inheritance
+    Dog dog = new Dog();
+    dog.eat();
+    dog.bark();
+
+    // Multilevel inheritance
+    BabyDog babyDog = new BabyDog();
+    babyDog.eat();
+    babyDog.bark();
+    babyDog.weep();
+
+    // Hierarchical inheritance
+    Cat cat = new Cat();
+    cat.eat();
+    cat.meow();
+
+    // Hybrid inheritance
+    Lion lion = new Lion();
+    lion.eat();
+    lion.meow();
+    lion.roar();
+  }
+}
